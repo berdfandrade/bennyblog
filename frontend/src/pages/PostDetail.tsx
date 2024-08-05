@@ -5,7 +5,7 @@ import { Box, Container, Heading, Text } from '@chakra-ui/react';
 import Navbar from '../components/navbar/Navbar';
 
 const posts = [
-  { id: '1', title: 'First Post', content: 'This is the content of the first post.' },
+  { id: '1', title: 'Sobre minhas visões de vida', content: 'Sou comunista, e razoavelmente budista, com pouca ou nenhuma esperança na humanidade' },
   { id: '2', title: 'Second Post', content: 'This is the content of the second post.' },
 ];
 
@@ -21,10 +21,11 @@ const PostDetail: React.FC = () => {
     <>
       <Navbar />
       <Container maxW="container.md" mt={8}>
-        <Box borderWidth="1px" borderRadius="lg" p={4} mb={4}>
-          <Heading as="h2" size="md" mb={2}>
+        <Box p={4} mb={4}>
+          <Heading as="h2" size="md" mb={5}>
             {post.title}
           </Heading>
+          <Box borderBottom='1px dashed' mb={5}></Box>
           <Text>{post.content}</Text>
         </Box>
       </Container>
