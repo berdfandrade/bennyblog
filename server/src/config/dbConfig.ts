@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
 
-export const dbConfig = async (): Promise<void> => {
+export const dbConnect = async (): Promise<void> => {
   dotenv.config()
   try {
     const uri = process.env.MONGO_URI || 'http//localhost:27017/blog'

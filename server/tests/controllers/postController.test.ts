@@ -1,7 +1,7 @@
 import request from "supertest";
 import mongoose from "mongoose";
 import { MongoMemoryServer } from "mongodb-memory-server";
-import app from "../../src/index";
+import app from "../../src/app";
 import Post from "../../src/models/postModel";
 
 let mongoServer: MongoMemoryServer;
@@ -20,6 +20,11 @@ afterAll(async () => {
 beforeEach(async () => {
   await Post.deleteMany({});
 });
+
+afterEach(() => {
+  jest.restoreAllMocks();
+});
+
 
 describe("PostController", () => {
   describe("GET /posts", () => {
